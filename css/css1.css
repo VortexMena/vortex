@@ -71,7 +71,7 @@ body {
 }
 
 #h2, #h3 {
-    padding-top: 80px;
+    padding-top: 40px;
 }
 
 #h2 {
@@ -80,10 +80,17 @@ body {
 
 /* Image Section */
 .imges {
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    justify-content: center;
+    width: 100%;
+    
+}
+.img{
+    
+    width: 100%;
 }
 
 .imges img {
@@ -98,21 +105,29 @@ body {
     .imges {
         flex-direction: row;
         justify-content: center;
+        background: #1F1F1F;
+        width: 48%;
+        border-radius: 35px;
+    
     }
 
     .imges img {
-        width: 45%; /* Adjust the size of images to be side by side */
+        width: 30%; /* Adjust the size of images to be side by side */
         margin-left: -10px;
         margin-right: -10px;
     }
 
     /* Make the form and inputs wider on larger screens */
     form {
-        width: 70%; /* Adjust form width as needed */
+        width: 60%; /* Adjust form width as needed */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
     .box {
-        width: 100%;
+        width: 80%;
     }
 
     input, select {
@@ -292,6 +307,7 @@ input, select {
 
 /* Button */
 button {
+    
     font-size: 1.5rem;
     padding: 12px 20px;
     background-color: #1F1F1F;
