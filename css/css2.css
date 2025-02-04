@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Noto+Sans+Arabic:wght@100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+    transition: transform 0.3s ease;
+
+}
+body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 0.7rem;
+    font-family: "Noto Sans Arabic", serif;
+}
+.endpage{
+    gap: 20px;
+    height: 100vh;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Optional: Add any specific styles for the logo */
+.logo {
+    width: 100px;  /* Adjust the size of your logo */
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);  /* Adds a hover effect to scale the logo */
+}
+.endpage img {
+    width: 300px;
+    padding-right: 5px;
+
+}

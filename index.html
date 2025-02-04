@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/css1.css">
+    <title>overlord_call</title>
+</head>
+<body>
+    <div class="main">
+        <div class="logo">
+            <img src="files/white vertion.png" alt="logo" width="80px">
+        </div>
+        <h1 id="h1">ينتهي التسجيل خلال </h1>
+        <div class="count_down">
+            <div class="numbers_box">
+              <h1 class="number">00</h1>
+              <h1 class="name">أيام</h1>
+            </div>
+            <span> : </span>
+            <div class="numbers_box">
+              <h1 class="number">00</h1>
+              <h1 class="name">ساعات</h1>
+            </div>
+            <span> : </span>
+            <div class="numbers_box">
+              <h1 class="number">00</h1>
+              <h1 class="name">دقائق</h1>
+            </div>
+            <span> : </span>
+            <div class="numbers_box">
+              <h1 class="number">00</h1>
+              <h1 class="name">ثواني</h1>
+            </div>
+          </div>
+        <h1 id="h2">تفاصيل المسابقة</h1>
+        <div class="imges">
+            <img src="files/Desktop - 5.png" alt="">
+            <img src="files/Desktop - 6.png" alt="">
+        </div>
+        <h1 id="h3">نموذج التسجيل</h1>
+        <h2 id="p">مهم جدا : سوف يتم الاتصال بك لتاكيد التفاصيل و ترتيب عملية الدفع</h2>
+
+        <!-- Form with Web3Forms Integration -->
+        <form action="https://api.web3forms.com/submit" method="POST" id="registrationForm" autocomplete="off" >
+            <input type="hidden" name="access_key" value="8d653e44-e78f-40db-a17c-cdd55ded3efd">
+            <input type="hidden" name="code" value="E1Y25M8D1">
+            <div class="box">
+                <label for="name">الاسم الكامل</label>
+                <input type="text" name="name" id="name" placeholder="اسمك الكامل" >
+            </div>
+            <div class="box">
+                <label for="number">رقم الهاتف</label>
+                <input type="text" name="phone" id="number" placeholder="رقم الهاتف" >
+            </div>
+
+            <!-- Updated Date of Birth Section -->
+            <div class="box">
+                <label for="date">تاريخ الميلاد</label>
+                <input type="text" name="birthdate" id="date" min="1900-01-01" max="2025-01-01" placeholder="تاريخ ميلادك" />
+            </div>
+            <div class="box">
+                <label for="freefire">معرف Free Fire</label>
+                <input type="number" name="freefireId" id="freefire" placeholder="معرف Free Fire" >
+            </div>
+<div class="box">
+    <label for="state">الولاية</label>
+    <select name="state" id="state">
+        <option value="">اختر ولاية</option>
+        <option value="صفاقس">صفاقس</option>
+        <option value="أريانة">أريانة</option>
+        <option value="باجة">باجة</option>
+        <option value="بن عروس">بن عروس</option>
+        <option value="بنزرت">بنزرت</option>
+        <option value="قابس">قابس</option>
+        <option value="قفصة">قفصة</option>
+        <option value="جندوبة">جندوبة</option>
+        <option value="القيروان">القيروان</option>
+        <option value="القصرين">القصرين</option>
+        <option value="قبلي">قبلي</option>
+        <option value="الكاف">الكاف</option>
+        <option value="المهدية">المهدية</option>
+        <option value="منوبة">منوبة</option>
+        <option value="مدنين">مدنين</option>
+        <option value="المنستير">المنستير</option>
+        <option value="نابل">نابل</option>
+        <option value="سيدي بوزيد">سيدي بوزيد</option>
+        <option value="سليانة">سليانة</option>
+        <option value="سوسة">سوسة</option>
+        <option value="تطاوين">تطاوين</option>
+        <option value="توزر">توزر</option>
+        <option value="تونس">تونس</option>
+        <option value="زغوان">زغوان</option>
+    </select>
+</div>
+            <button type="submit">تسجيل</button>
+        </form>
+        <div id="errors"></div>
+        <div id="inf"></div>
+    </div>
+
+    <script src="js/js1.js" defer></script>
+</body>
+</html>

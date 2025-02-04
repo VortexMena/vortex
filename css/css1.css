@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Noto+Sans+Arabic:wght@100..900&display=swap');
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    user-select: none; /* Security */
+    min-height: 100vh;
+    padding: 0 10px;
+    text-align: center;
+    background-color: #fff;
+    font-family: "Noto Sans Arabic", serif;
+}
+
+/* Main Layout */
+.main {
+    padding-top: 50px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Countdown Timer */
+.count_down {
+    color: white;
+    background: #1F1F1F;
+    border-radius: 15px;
+    padding: 10px 20px;
+    display: flex;
+    gap: 10px;
+    font-size: 0.7rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.numbers_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.2;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.number {
+    font-size: 2rem;
+}
+
+.name {
+    font-size: 0.8rem;
+}
+
+/* Headings */
+#h1, #h2, #h3 {
+    padding: 20px 0;
+}
+
+#h1 {
+    color: #1F1F1F;
+}
+
+#h2, #h3 {
+    padding-top: 80px;
+}
+
+#h2 {
+    padding-bottom: 20px;
+}
+
+/* Image Section */
+.imges {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.imges img {
+    pointer-events: none;
+    user-drag: none;
+    width: 80%;
+    height: auto;
+}
+
+/* Responsive layout for images */
+@media (min-width: 575px) {
+    .imges {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .imges img {
+        width: 45%; /* Adjust the size of images to be side by side */
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+
+    /* Make the form and inputs wider on larger screens */
+    form {
+        width: 70%; /* Adjust form width as needed */
+    }
+
+    .box {
+        width: 100%;
+    }
+
+    input, select {
+        width: 100%; /* Keep the inputs and select at 100% width */
+        padding: 15px 30px; /* Increase padding */
+        font-size: 1.2rem;  /* Increase font size */
+    }
+    select {
+        justify-content: center;
+        text-align: center; /* Center the text */
+        text-align-last: center; /* Center the placeholder text */
+        -webkit-appearance: none; /* Remove default styling on Webkit browsers like Safari */
+        -moz-appearance: none; /* Remove default styling on Firefox */
+        appearance: none; /* Standard property to remove default styling */
+        width: 100%; /* Ensure the select takes the full width */
+      }
+      select::-ms-expand {
+        display: none;
+      }
+    /* Countdown Timer */
+    .count_down {
+        color: white;
+        background: #1F1F1F;
+        border-radius: 15px;
+        padding: 10px 20px;
+        display: flex;
+        gap: 10px;
+        font-size: 1.5rem;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 600px; /* Set max-width for better control */
+        margin: 0 auto; /* This centers the countdown container horizontally */
+    }
+
+    /* Main Layout */
+    .main {
+        padding-top: 50px;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .numbers_box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        line-height: 1.2;
+    }
+
+    .number {
+        font-size: 3rem;
+    }
+
+    .name {
+        font-size: 1rem;
+    }
+    input[type="date"] {
+        font-size: 1.2rem;
+        padding: 20px 30px;
+    }
+
+}
+#date {
+    position: relative;
+    text-align: center;
+}
+
+#date::before {
+    content: "mm/dd/yyyy"; /* The placeholder text */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #aaa; /* Adjust color as needed */
+    pointer-events: none; /* Make the placeholder text unclickable */
+    font-size: 0.9rem; /* Adjust font size if needed */
+}
+
+#date:focus::before {
+    display: none; /* Hide the placeholder when the input is focused */
+}
+
+/* Form Section */
+
+/* Placeholder text positioning */
+input::placeholder {
+    text-align: center;  /* Horizontally center the placeholder text */
+    padding-left: 20px;   /* Moves the placeholder text horizontally */
+    padding-top: 10px;    /* Moves the placeholder text vertically */
+}
+
+/* Date input positioning */
+input[type="date"] {
+    width: 100%;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    background-color: #1F1F1F;
+    color: white;
+    border-radius: 15px;
+    border: none;
+    position: relative;
+    -webkit-appearance: none; /* Remove default styling in Safari */
+    -moz-appearance: none; /* Remove default styling in Firefox */
+    appearance: none; /* Standard property to remove default styling */
+}
+input[type="date"]::before {
+    content: "تاريخ الميلاد";  /* Custom placeholder text */
+    position: absolute;
+    top: 15px;  /* Position it correctly */
+    left: 20px;
+    color: #aaa;
+    pointer-events: none;
+    transition: 0.3s ease;
+    font-size: 1rem;
+}
+
+input[type="date"]:not(:placeholder-shown)::before {
+    display: none;
+}
+/* Date input placeholder workaround (use a background text) */
+input[type="date"]::-webkit-input-placeholder {
+    color: transparent; /* Hide the placeholder */
+}
+input[type="date"]:before {
+    content: "تاريخ الميلاد";  /* Custom placeholder text */
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    color: #aaa;
+    pointer-events: none;
+    transition: 0.3s ease;
+    font-size: 1rem;
+}
+input[type="date"]:focus {
+    font-size: 1.2rem;  /* Make font size larger */
+    padding: 15px 30px;
+}
+
+/* Select (dropdown list) positioning */
+select {
+    padding: 15px 30px;   /* Adjust padding to match larger screen size */
+    text-align: center;   /* Centers the selected text */
+    width: 100%;         /* Adjust width */
+    height: 50px;         /* Adjust height */
+    font-size: 1.2rem;  /* Font size */
+    background: #1F1F1F;
+    color: white;
+    border-radius: 15px;
+    border: none;
+    appearance: none;
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"%3E%3Cpath fill="white" d="M6 9l3-3H3z"/%3E%3C/svg%3E');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    padding-right: 35px;
+}
+
+/* Placeholder Text for Select */
+select option {
+    padding-left: 10px;
+    text-align: center;
+}
+
+/* Ensure consistency for both Date and Select on iPhone */
+input, select {
+    background-color: #1F1F1F;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 15px;
+    border: none;
+    width: 100%;
+    padding: 15px 30px;  /* Ensure consistent padding */
+    box-sizing: border-box;
+}
+
+/* Button */
+button {
+    font-size: 1.5rem;
+    padding: 12px 20px;
+    background-color: #1F1F1F;
+    color: white;
+    border-radius:15px;
+    cursor: pointer;
+    width: 150px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #333;
+}
+
+/* Error and Info Messages */
+#errors, #inf {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    padding: 10px;
+    color: red;
+    line-height: 1.5;
+}
+
+#inf {
+    height: 100px;
+}
+
+#p {
+    padding: 0 25px;
+    line-height: 1.5;
+}
+
+/* For Webkit browsers (Chrome, Safari) */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.logo img {
+    width: 300px;
+    padding-right: 5px;
+}
